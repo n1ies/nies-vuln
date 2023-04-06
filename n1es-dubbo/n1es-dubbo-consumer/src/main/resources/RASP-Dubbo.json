@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "08f3addf-d1f1-4bd7-8f61-9dd184f1aa33",
+		"name": "RASP Dubbo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20304011"
+	},
+	"item": [
+		{
+			"name": "FileSystem",
+			"item": [
+				{
+					"name": "FileInputStreamForString",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/FileSystem/fileInputStream?file=/etc/passwd",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"FileSystem",
+								"fileInputStream"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "/etc/passwd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FileInputStreamForMap",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"file\":\"/etc/passwd\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{base_url}}/FileSystem/fileInputStreamForMap"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SQL",
+			"item": [
+				{
+					"name": "SQLforString",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/SQL/string/sql?user=test' or '1'='1",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"SQL",
+								"string",
+								"sql"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "test' or '1'='1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SQLforMap",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"test' or '1'='1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{base_url}}/SQL/map/sql"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "表达式执行",
+			"item": [
+				{
+					"name": "Ognl",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"exp\":\"new java.io.File('/usr').list()\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{base_url}}/Expression/ognl"
+					},
+					"response": []
+				},
+				{
+					"name": "spEL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"exp\":\"new java.io.File('/usr').list()\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{base_url}}/Expression/SpEL"
+					},
+					"response": []
+				},
+				{
+					"name": "Mvel2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"exp\":\"new java.io.File('/usr').list()\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{base_url}}/Expression/mvel2"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8001",
+			"type": "string"
+		}
+	]
+}
