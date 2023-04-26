@@ -48,6 +48,32 @@
             <artifactId>dubbo-common</artifactId>
             <version>2.7.13</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>commons-beanutils</groupId>-->
+<!--            <artifactId>commons-beanutils</artifactId>-->
+<!--            <version>1.8.3</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.javaweb</groupId>
+            <artifactId>javaweb-utils</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.2</version>
+            <systemPath>/Users/nies/IdeaProjects/nies-vuln/vuln-test/lib/commons-beanutils-1.9.2.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
     </dependencies>
 
     <build>
